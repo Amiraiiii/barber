@@ -34,7 +34,7 @@
 - **Environment Variables:**
   - `NEXT_PUBLIC_API_URL`: URL задеплоенного API (например `https://blackline-barbers-api.vercel.app`)
 
-### Проект 2: `apps/miniapp` (Telegram Mini App)
+### Проект 2: `apps/miniapp` (Telegram Mini App)   
 - **Project Name:** `blackline-barbers-miniapp`
 - **Root Directory:** `apps/miniapp`
 - **Framework Preset:** `Vite`
