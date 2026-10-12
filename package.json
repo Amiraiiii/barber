@@ -1,0 +1,22 @@
+{
+  "name": "barbershop",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -p \"[{name}]\" -n \"API,WEB\" -c \"yellow,cyan\" \"npm run dev:api\" \"npm run dev:web\"",
+    "dev:web": "npm run dev --workspace=apps/web",
+    "dev:api": "npm run dev --workspace=apps/api",
+    "dev:miniapp": "npm run dev --workspace=apps/miniapp",
+    "build:web": "npm run build --workspace=apps/web",
+    "db:generate": "npm run db:generate --workspace=packages/db",
+    "db:push": "npm run db:push --workspace=packages/db",
+    "db:migrate": "npx prisma migrate dev --schema=packages/db/prisma/schema.prisma",
+    "db:seed": "npm run db:seed --workspace=packages/db"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}

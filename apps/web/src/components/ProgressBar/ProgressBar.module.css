@@ -1,0 +1,12 @@
+.bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--bronze);
+  transform-origin: left;
+  z-index: 200;
+  transform: scaleX(0);
+  transition: transform 0.1s linear;
+}

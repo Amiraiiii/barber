@@ -1,0 +1,105 @@
+/* ── My Bookings Screen Styling ── */
+.empty-bookings {
+  text-align: center;
+  padding: 40px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: var(--tg-hint);
+}
+
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.booking-card {
+  background: var(--tg-secondary-bg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.booking-card.cancelled {
+  opacity: 0.6;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 10px;
+}
+
+.card-service {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.status-pill {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+.status-pill.confirmed {
+  background: rgba(197, 160, 89, 0.2);
+  color: var(--accent);
+}
+
+.status-pill.cancelled {
+  background: rgba(224, 82, 82, 0.2);
+  color: var(--danger);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.card-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-row .label {
+  color: var(--tg-hint);
+}
+
+.token-code {
+  font-family: monospace;
+  color: var(--accent);
+}
+
+.card-actions {
+  border-top: 1px dashed rgba(255, 255, 255, 0.05);
+  padding-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-cancel {
+  background: transparent;
+  color: var(--danger);
+  border: 1px solid rgba(224, 82, 82, 0.3);
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-cancel:disabled {
+  opacity: 0.5;
+}

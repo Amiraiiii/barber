@@ -1,0 +1,111 @@
+/* ── Step 5 Success Styling ── */
+.success-screen {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.success-icon-wrap {
+  margin-bottom: 24px;
+}
+
+.success-ring {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(197, 160, 89, 0.15);
+  border: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.success-check {
+  font-size: 36px;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.success-title {
+  font-family: 'Cinzel', serif, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--tg-fg);
+  margin-bottom: 8px;
+}
+
+.success-subtitle {
+  font-size: 14px;
+  color: var(--tg-hint);
+  margin-bottom: 24px;
+}
+
+.token-card {
+  background: var(--tg-secondary-bg);
+  border: 1px dashed var(--accent);
+  border-radius: var(--radius);
+  padding: 12px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.token-label {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--tg-hint);
+  margin-bottom: 4px;
+}
+
+.token-value {
+  font-family: monospace;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 2px;
+}
+
+.details-card {
+  width: 100%;
+  background: var(--tg-secondary-bg);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.detail-row span {
+  color: var(--tg-hint);
+}
+
+.detail-row strong {
+  color: var(--tg-fg);
+}
+
+.double-cta {
+  display: flex;
+  gap: 12px;
+}
+
+.double-cta button {
+  flex: 1;
+}

@@ -1,0 +1,241 @@
+.section {
+  padding: 10rem 0;
+  position: relative;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: end;
+  margin-bottom: 5rem;
+}
+
+.eyebrow {
+  display: block;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--bronze, #c5a059);
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 6vw, 6rem);
+  font-weight: 300;
+  color: var(--ivory, #f5f5f7);
+  line-height: 0.95;
+}
+
+.heading em {
+  font-style: italic;
+  color: var(--ivory-dim, #a1a1a6);
+}
+
+.subheading {
+  font-size: 0.95rem;
+  color: var(--ivory-dim, #a1a1a6);
+  line-height: 1.7;
+  max-width: 36ch;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.cardDim { 
+  opacity: 0.45;
+  filter: grayscale(30%);
+}
+
+/* Portrait */
+.portrait {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--charcoal, #121212);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.portraitImg {
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+  filter: contrast(1.05) brightness(0.95);
+}
+
+.cardHovered .portraitImg {
+  transform: scale(1.06);
+  filter: contrast(1.1) brightness(1.02);
+}
+
+.portraitGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(12, 12, 12, 0.75) 100%
+  );
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.expBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 3;
+  padding: 0.35rem 0.75rem;
+  background: rgba(18, 18, 18, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--bronze, #c5a059);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Reveal overlay */
+.portraitReveal {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  background: rgba(12, 12, 12, 0.82);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cardHovered .portraitReveal { 
+  opacity: 1; 
+  transform: translateY(0);
+}
+
+.revealContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  width: 100%;
+}
+
+.revealTag {
+  font-size: 0.65rem;
+  font-family: var(--font-mono, monospace);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--bronze, #c5a059);
+}
+
+.revealSpecialty {
+  font-size: 0.9rem;
+  color: var(--ivory, #f5f5f7);
+  line-height: 1.6;
+  max-width: 24ch;
+  font-weight: 300;
+}
+
+.bookBarberBtn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #0c0c0c;
+  background: var(--ivory, #f5f5f7);
+  border-radius: 2px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.bookBarberBtn:hover {
+  background: var(--bronze, #c5a059);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Info */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.nameLine {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.75rem;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 300;
+  color: var(--ivory, #f5f5f7);
+  line-height: 1;
+}
+
+.title {
+  font-size: 0.72rem;
+  color: var(--bronze, #c5a059);
+  letter-spacing: 0.12em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.bio {
+  font-size: 0.88rem;
+  color: var(--ivory-dim, #a1a1a6);
+  line-height: 1.7;
+  max-width: 36ch;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .header { grid-template-columns: 1fr; margin-bottom: 3.5rem; }
+  .grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+  .cardDim { opacity: 0.8; filter: none; }
+}
+
+@media (max-width: 480px) {
+  .section { padding: 5rem 0; }
+  .header { margin-bottom: 2.5rem; }
+}
+
